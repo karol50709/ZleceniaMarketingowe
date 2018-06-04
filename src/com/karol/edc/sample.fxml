@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.karol.edc.Controller">
+   <children>
+      <Slider fx:id="sliderHours" layoutX="50.0" layoutY="128.0" max="23.0" prefHeight="15.0" prefWidth="304.0" showTickLabels="true" showTickMarks="true" />
+      <ImageView fx:id="logo" fitHeight="80.0" fitWidth="158.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="plusHour" layoutX="363.0" layoutY="123.0" mnemonicParsing="false" onAction="#plusHour" text="+" />
+      <Button fx:id="minusHour" layoutX="420.0" layoutY="123.0" mnemonicParsing="false" onAction="#minusHour" prefHeight="26.0" prefWidth="29.0" text="-" />
+      <Slider fx:id="sliderMinutes" layoutX="50.0" layoutY="188.0" max="59.0" prefHeight="15.0" prefWidth="304.0" showTickLabels="true" showTickMarks="true" />
+      <Button fx:id="plusMinute" layoutX="363.0" layoutY="181.0" mnemonicParsing="false" onAction="#plusMinute" text="+" />
+      <Button fx:id="minusMinute" layoutX="420.0" layoutY="181.0" mnemonicParsing="false" onAction="#minusMinute" prefHeight="26.0" prefWidth="29.0" text="-" />
+      <TextField fx:id="textHour" layoutX="160.0" layoutY="84.0" prefHeight="26.0" prefWidth="42.0" promptText="HH" />
+      <TextField fx:id="textMinute" layoutX="217.0" layoutY="84.0" prefHeight="26.0" prefWidth="63.0" promptText="MM" />
+      <ComboBox fx:id="descriptions" layoutX="50.0" layoutY="344.0" onAction="#setDescription" prefHeight="26.0" prefWidth="304.0" promptText="Opisy zleceń" />
+      <TextArea fx:id="description" layoutX="50.0" layoutY="250.0" prefHeight="80.0" prefWidth="304.0" promptText="Opis zlecenia" />
+      <Button fx:id="addTask" layoutX="50.0" layoutY="405.0" mnemonicParsing="false" onAction="#addTask" prefHeight="26.0" prefWidth="304.0" text="Dodaj Zlecenie" />
+      <TableView fx:id="table" layoutX="520.0" layoutY="49.0" prefHeight="432.0" prefWidth="536.0" />
+      <TextField fx:id="id" layoutX="19.0" layoutY="84.0" prefHeight="26.0" prefWidth="130.0" promptText="Numer zlecenia" />
+      <Button fx:id="plusFiveMinutes" layoutX="358.0" layoutY="224.0" mnemonicParsing="false" onAction="#plusFiveMinutes" text="+5" />
+      <Button fx:id="minusFiveMinutes" layoutX="419.0" layoutY="224.0" mnemonicParsing="false" onAction="#minusFiveMinutes" text="-5" />
+      <Button fx:id="save" layoutX="519.0" layoutY="14.0" mnemonicParsing="false" onAction="#save2file" prefHeight="26.0" prefWidth="158.0" text="Zapisz do csv" />
+      <Button fx:id="About" layoutX="1040.0" layoutY="14.0" mnemonicParsing="false" onAction="#openAbout" text="?" />
+   </children>
+</Pane>
