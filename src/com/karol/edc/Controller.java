@@ -1,6 +1,8 @@
 package com.karol.edc;
 
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -62,7 +64,6 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        //logo.setImage(Image);
         System.out.println("oooo");
 
         descriptions.setItems(observableList);
@@ -99,6 +100,21 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
         table.sort();
+
+        sliderHours.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                textHour.setText(Utils.Double2String(sliderHours.getValue())+" h");
+            }
+        });
+
+        sliderMinutes.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                textMinute.setText(Utils.Double2String(sliderMinutes.getValue())+" m");
+            }
+        });
+
 
     }
 
@@ -184,8 +200,6 @@ public class Controller implements Initializable {
     @FXML
     public void save2file(){
         ArrayList<Task> tmp = new ArrayList<>();
-
-
         try {
             Utils.createCopyofCSV();
             Utils.safe2csv(arrayListFromObserveArrayList(taskObservableList));
@@ -218,6 +232,8 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
     }
+
+
 
 
 }

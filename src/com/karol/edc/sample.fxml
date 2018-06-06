@@ -11,11 +11,11 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.karol.edc.Controller">
    <children>
-      <Slider fx:id="sliderHours" layoutX="50.0" layoutY="128.0" max="23.0" prefHeight="15.0" prefWidth="304.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="sliderHours" layoutX="50.0" layoutY="128.0" majorTickUnit="5.0" max="23.0" prefHeight="15.0" prefWidth="304.0" showTickLabels="true" showTickMarks="true" />
       <ImageView fx:id="logo" fitHeight="80.0" fitWidth="158.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="plusHour" layoutX="363.0" layoutY="123.0" mnemonicParsing="false" onAction="#plusHour" text="+" />
       <Button fx:id="minusHour" layoutX="420.0" layoutY="123.0" mnemonicParsing="false" onAction="#minusHour" prefHeight="26.0" prefWidth="29.0" text="-" />
-      <Slider fx:id="sliderMinutes" layoutX="50.0" layoutY="188.0" max="59.0" prefHeight="15.0" prefWidth="304.0" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="sliderMinutes" layoutX="50.0" layoutY="188.0" majorTickUnit="10.0" max="59.0" prefHeight="15.0" prefWidth="304.0" showTickLabels="true" showTickMarks="true" />
       <Button fx:id="plusMinute" layoutX="363.0" layoutY="181.0" mnemonicParsing="false" onAction="#plusMinute" text="+" />
       <Button fx:id="minusMinute" layoutX="420.0" layoutY="181.0" mnemonicParsing="false" onAction="#minusMinute" prefHeight="26.0" prefWidth="29.0" text="-" />
       <TextField fx:id="textHour" layoutX="160.0" layoutY="84.0" prefHeight="26.0" prefWidth="42.0" promptText="HH" />

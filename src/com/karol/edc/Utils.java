@@ -2,17 +2,14 @@ package com.karol.edc;
 
 
 
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Scanner;
-import java.util.StringTokenizer;
-
+import java.util.*;
 
 
 public class Utils {
@@ -32,10 +29,14 @@ public class Utils {
     protected static ArrayList<Task> getDataFromCSV() throws FileNotFoundException {
         ArrayList<Task> result = new ArrayList<>();
         File file = new File("zlecenia.csv");
-        Scanner scanner = new Scanner(file);
-        result.add(getTask(scanner.nextLine()));
-        while (scanner.hasNext()){
-            result.add(getTask(scanner.nextLine()));
+        if(file.exists()) {
+            Scanner scanner = new Scanner(file);
+            if (scanner.hasNext()) {
+                result.add(getTask(scanner.nextLine()));
+            }
+            while (scanner.hasNext()) {
+                result.add(getTask(scanner.nextLine()));
+            }
         }
         return result;
     }
@@ -48,15 +49,22 @@ public class Utils {
 
     protected static void createCopyofCSV() throws IOException {
         Date date = new Date();
-        String suffix = date.toString();
+        String suffix = String.valueOf(date.getTime());
         File file = new File("zlecenia.csv");
-        Files.copy(Paths.get(file.getAbsolutePath()),Paths.get(file.getAbsolutePath()+suffix));
+        if(file.exists()) {
+            Files.copy(Paths.get(file.getAbsolutePath()), Paths.get(file.getAbsolutePath() + suffix));
+        }
     }
 
     protected static void safe2csv(ArrayList<Task> tasks) throws  IOException{
+        Collections.reverse(tasks);
+
         File file = new File("zlecenia.csv");
-        Files.delete(Paths.get(file.getAbsolutePath()));
+        if(file.exists()) {
+            Files.delete(Paths.get(file.getAbsolutePath()));
+        }
         File newFile = new File("zlecenia.csv");
+        newFile.createNewFile();
         PrintWriter printWriter = new PrintWriter(newFile);
         for (int x=0;x<tasks.size();x++){
             printWriter.write(tasks.get(x).toString());
@@ -64,5 +72,6 @@ public class Utils {
         }
         printWriter.close();
     }
+
 
 }

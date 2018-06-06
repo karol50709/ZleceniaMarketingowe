@@ -5,6 +5,6 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="219.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextArea layoutX="69.0" layoutY="38.0" prefHeight="146.0" prefWidth="467.0" text="Aplikacja do wprowadzania zleceń marketingowych, zapis danych&#10;odbywa się do pliku csv z którego następnie kopiujemy do pliku xls.&#10;Po każdym zapisie generuje się backup-owy plik z zleceniami&#10;&#10;05-06-2018r.&#10;v.1.0&#10;&#10;Cdn....." />
+      <TextArea layoutX="69.0" layoutY="38.0" prefHeight="146.0" prefWidth="467.0" text="Aplikacja do wprowadzania zleceń marketingowych, zapis danych&#10;odbywa się do pliku csv z którego następnie kopiujemy do pliku xls.&#10;Po każdym zapisie generuje się backup-owy plik z zleceniami&#10;&#10;05-06-2018r.&#10;v.1.0&#10;07-06-2018r.&#10;v.1.1&#10;-Przesunięcie suwaka zmienia wartość w polu&#10;-Dodano zabezpieczenia przed pustą listą zleceń&#10;-Lista w pliku csv jest odwrócona&#10;&#10;Cdn....." />
    </children>
 </Pane>

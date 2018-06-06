@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0106451-b7b1-4b5c-8187-0290e9603ab3" name="Default" comment="First Commit" />
+    <list default="true" id="c0106451-b7b1-4b5c-8187-0290e9603ab3" name="Default" comment="First Commit">
+      <change beforePath="$PROJECT_DIR$/src/com/karol/edc/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/karol/edc/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/karol/edc/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/karol/edc/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/karol/edc/about.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/karol/edc/about.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/karol/edc/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/karol/edc/sample.fxml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,29 +34,18 @@
       </file>
       <file leaf-file-name="about.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/karol/edc/about.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
             <state relative-caret-position="390">
               <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.class" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/out/production/ZleceniaMarketingowe/com/karol/edc/Controller.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#6708#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file leaf-file-name="About.java" pinned="false" current-in-tab="false">
@@ -64,11 +60,12 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="182" selection-start-line="182" selection-end-line="182" />
+            <state relative-caret-position="-1077">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#initialize#0;class#Controller#0" />
+                <element signature="class#2881:3151" />
+                <element signature="class#3209:3483" />
                 <element signature="method#plusHour#0;class#Controller#0" />
                 <element signature="method#minusHour#0;class#Controller#0" />
                 <element signature="method#plusMinute#0;class#Controller#0" />
@@ -79,8 +76,6 @@
                 <element signature="method#validData#0;class#Controller#0" />
                 <element signature="method#clearTextAreas#0;class#Controller#0" />
                 <element signature="method#resetSliders#0;class#Controller#0" />
-                <element signature="method#save2file#0;class#Controller#0" />
-                <element signature="method#arrayListFromObserveArrayList#0;class#Controller#0" />
                 <element signature="method#openAbout#0;class#Controller#0" />
               </folding>
             </state>
@@ -103,16 +98,22 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="-770">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Double2String#0;class#Utils#0" />
                 <element signature="method#String2Int#0;class#Utils#0" />
                 <element signature="method#getTask#0;class#Utils#0" />
+                <element signature="method#createCopyofCSV#0;class#Utils#0" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zlecenia.csv" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zlecenia.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -128,12 +129,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/karol/edc/sample.fxml" />
+        <option value="$PROJECT_DIR$/zlecenia.csv" />
+        <option value="$PROJECT_DIR$/src/com/karol/edc/Controller.java" />
+        <option value="$PROJECT_DIR$/src/com/karol/edc/about.fxml" />
+        <option value="$PROJECT_DIR$/src/com/karol/edc/Utils.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="264" />
+    <option name="y" value="22" />
+    <option name="width" value="1390" />
+    <option name="height" value="999" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,9 +177,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -174,6 +192,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.karol.edc.Main" />
+      <module name="ZleceniaMarketingowe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.karol.edc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -215,13 +244,18 @@
       <properties />
       <listeners />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <changelist id="c0106451-b7b1-4b5c-8187-0290e9603ab3" name="Default" comment="First Commit" />
       <created>1359379246138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -234,18 +268,18 @@
     <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32977587" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32941177" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33262032" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32941177" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18072917" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18072917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -266,6 +300,9 @@
       <window_info anchor="bottom" id="Application Servers" order="7" />
     </layout>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -275,18 +312,12 @@
     <MESSAGE value="First Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#toString#0;class#Task#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zlecenia.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -299,6 +330,7 @@
             <element signature="method#Double2String#0;class#Utils#0" />
             <element signature="method#String2Int#0;class#Utils#0" />
             <element signature="method#getTask#0;class#Utils#0" />
+            <element signature="method#createCopyofCSV#0;class#Utils#0" />
           </folding>
         </state>
       </provider>
@@ -319,7 +351,8 @@
           <caret line="192" column="12" selection-start-line="192" selection-start-column="12" selection-end-line="192" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="class#2881:3151" />
+            <element signature="class#3209:3483" />
             <element signature="method#plusHour#0;class#Controller#0" />
             <element signature="method#minusHour#0;class#Controller#0" />
             <element signature="method#plusMinute#0;class#Controller#0" />
@@ -330,20 +363,18 @@
             <element signature="method#validData#0;class#Controller#0" />
             <element signature="method#clearTextAreas#0;class#Controller#0" />
             <element signature="method#resetSliders#0;class#Controller#0" />
-            <element signature="method#save2file#0;class#Controller#0" />
-            <element signature="method#arrayListFromObserveArrayList#0;class#Controller#0" />
             <element signature="method#openAbout#0;class#Controller#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Task.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -368,6 +399,7 @@
             <element signature="method#Double2String#0;class#Utils#0" />
             <element signature="method#String2Int#0;class#Utils#0" />
             <element signature="method#getTask#0;class#Utils#0" />
+            <element signature="method#createCopyofCSV#0;class#Utils#0" />
           </folding>
         </state>
       </provider>
@@ -388,7 +420,8 @@
           <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="class#2881:3151" />
+            <element signature="class#3209:3483" />
             <element signature="method#plusHour#0;class#Controller#0" />
             <element signature="method#minusHour#0;class#Controller#0" />
             <element signature="method#plusMinute#0;class#Controller#0" />
@@ -399,8 +432,6 @@
             <element signature="method#validData#0;class#Controller#0" />
             <element signature="method#clearTextAreas#0;class#Controller#0" />
             <element signature="method#resetSliders#0;class#Controller#0" />
-            <element signature="method#save2file#0;class#Controller#0" />
-            <element signature="method#arrayListFromObserveArrayList#0;class#Controller#0" />
             <element signature="method#openAbout#0;class#Controller#0" />
           </folding>
         </state>
@@ -414,12 +445,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Task.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,6 +472,7 @@
             <element signature="method#Double2String#0;class#Utils#0" />
             <element signature="method#String2Int#0;class#Utils#0" />
             <element signature="method#getTask#0;class#Utils#0" />
+            <element signature="method#createCopyofCSV#0;class#Utils#0" />
           </folding>
         </state>
       </provider>
@@ -467,12 +499,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -483,6 +515,7 @@
             <element signature="method#Double2String#0;class#Utils#0" />
             <element signature="method#String2Int#0;class#Utils#0" />
             <element signature="method#getTask#0;class#Utils#0" />
+            <element signature="method#createCopyofCSV#0;class#Utils#0" />
           </folding>
         </state>
       </provider>
@@ -493,7 +526,8 @@
           <caret line="164" column="9" lean-forward="true" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="class#2881:3151" />
+            <element signature="class#3209:3483" />
             <element signature="method#plusHour#0;class#Controller#0" />
             <element signature="method#minusHour#0;class#Controller#0" />
             <element signature="method#plusMinute#0;class#Controller#0" />
@@ -504,8 +538,6 @@
             <element signature="method#validData#0;class#Controller#0" />
             <element signature="method#clearTextAreas#0;class#Controller#0" />
             <element signature="method#resetSliders#0;class#Controller#0" />
-            <element signature="method#save2file#0;class#Controller#0" />
-            <element signature="method#arrayListFromObserveArrayList#0;class#Controller#0" />
             <element signature="method#openAbout#0;class#Controller#0" />
           </folding>
         </state>
@@ -533,12 +565,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -549,6 +581,7 @@
             <element signature="method#Double2String#0;class#Utils#0" />
             <element signature="method#String2Int#0;class#Utils#0" />
             <element signature="method#getTask#0;class#Utils#0" />
+            <element signature="method#createCopyofCSV#0;class#Utils#0" />
           </folding>
         </state>
       </provider>
@@ -559,7 +592,8 @@
           <caret line="165" column="32" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="class#2881:3151" />
+            <element signature="class#3209:3483" />
             <element signature="method#plusHour#0;class#Controller#0" />
             <element signature="method#minusHour#0;class#Controller#0" />
             <element signature="method#plusMinute#0;class#Controller#0" />
@@ -570,8 +604,6 @@
             <element signature="method#validData#0;class#Controller#0" />
             <element signature="method#clearTextAreas#0;class#Controller#0" />
             <element signature="method#resetSliders#0;class#Controller#0" />
-            <element signature="method#save2file#0;class#Controller#0" />
-            <element signature="method#arrayListFromObserveArrayList#0;class#Controller#0" />
             <element signature="method#openAbout#0;class#Controller#0" />
           </folding>
         </state>
@@ -599,12 +631,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -619,7 +651,8 @@
           <caret line="128" column="9" lean-forward="true" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="class#2881:3151" />
+            <element signature="class#3209:3483" />
             <element signature="method#plusHour#0;class#Controller#0" />
             <element signature="method#minusHour#0;class#Controller#0" />
             <element signature="method#plusMinute#0;class#Controller#0" />
@@ -630,8 +663,6 @@
             <element signature="method#validData#0;class#Controller#0" />
             <element signature="method#clearTextAreas#0;class#Controller#0" />
             <element signature="method#resetSliders#0;class#Controller#0" />
-            <element signature="method#save2file#0;class#Controller#0" />
-            <element signature="method#arrayListFromObserveArrayList#0;class#Controller#0" />
             <element signature="method#openAbout#0;class#Controller#0" />
           </folding>
         </state>
@@ -653,7 +684,8 @@
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="class#2881:3151" />
+            <element signature="class#3209:3483" />
             <element signature="method#plusHour#0;class#Controller#0" />
             <element signature="method#minusHour#0;class#Controller#0" />
             <element signature="method#plusMinute#0;class#Controller#0" />
@@ -664,16 +696,14 @@
             <element signature="method#validData#0;class#Controller#0" />
             <element signature="method#clearTextAreas#0;class#Controller#0" />
             <element signature="method#resetSliders#0;class#Controller#0" />
-            <element signature="method#save2file#0;class#Controller#0" />
-            <element signature="method#arrayListFromObserveArrayList#0;class#Controller#0" />
             <element signature="method#openAbout#0;class#Controller#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -693,8 +723,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,12 +737,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -735,6 +765,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/out/production/ZleceniaMarketingowe/com/karol/edc/Controller.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -746,43 +790,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zlecenia.csv">
+    <entry file="file://$PROJECT_DIR$/zlecenia.csvWed Jun 06 22:38:35 CEST 2018">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Double2String#0;class#Utils#0" />
-            <element signature="method#String2Int#0;class#Utils#0" />
-            <element signature="method#getTask#0;class#Utils#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/about.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/About.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="182" selection-start-line="182" selection-end-line="182" />
+        <state relative-caret-position="-1077">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="class#2881:3151" />
+            <element signature="class#3209:3483" />
             <element signature="method#plusHour#0;class#Controller#0" />
             <element signature="method#minusHour#0;class#Controller#0" />
             <element signature="method#plusMinute#0;class#Controller#0" />
@@ -793,39 +830,27 @@
             <element signature="method#validData#0;class#Controller#0" />
             <element signature="method#clearTextAreas#0;class#Controller#0" />
             <element signature="method#resetSliders#0;class#Controller#0" />
-            <element signature="method#save2file#0;class#Controller#0" />
-            <element signature="method#arrayListFromObserveArrayList#0;class#Controller#0" />
             <element signature="method#openAbout#0;class#Controller#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/About.java">
+    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/karol/edc/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/ZleceniaMarketingowe/com/karol/edc/Controller.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-770">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#0#6708#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#Double2String#0;class#Utils#0" />
+            <element signature="method#String2Int#0;class#Utils#0" />
+            <element signature="method#getTask#0;class#Utils#0" />
+            <element signature="method#createCopyofCSV#0;class#Utils#0" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zlecenia.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
