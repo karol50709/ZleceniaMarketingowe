@@ -29,5 +29,6 @@
       <Button fx:id="minusFiveMinutes" layoutX="419.0" layoutY="224.0" mnemonicParsing="false" onAction="#minusFiveMinutes" text="-5" />
       <Button fx:id="save" layoutX="519.0" layoutY="14.0" mnemonicParsing="false" onAction="#save2file" prefHeight="26.0" prefWidth="158.0" text="Zapisz do csv" />
       <Button fx:id="About" layoutX="1040.0" layoutY="14.0" mnemonicParsing="false" onAction="#openAbout" text="?" />
+      <Button layoutX="691.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteTask" prefHeight="26.0" prefWidth="113.0" text="Usuń zlecenie" />
    </children>
 </Pane>

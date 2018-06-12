@@ -50,6 +50,7 @@ public class Controller implements Initializable {
 
     ObservableList<String> observableList = FXCollections.observableArrayList(
             "Porównywanie treści pisma",
+            "Porównywanie treści pisma, nowa baza",
             "Porównywanie treści pisma, zaczytanie danych do e-nadawcy",
             "Tworzenie projektu",
             "Porównywanie treści pisma, zmiana mapowania bazy",
@@ -206,6 +207,7 @@ public class Controller implements Initializable {
                     }
         catch (IOException e){
             e.printStackTrace();
+            shomExeptionWindow(e);
         }
 
     }
@@ -233,7 +235,39 @@ public class Controller implements Initializable {
         }
     }
 
+    @FXML
+    public void deleteTask(){
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Usunięcie zlecenia");
+        alert.setHeaderText("Czy na pewno chcesz usunąć zlecenie");
+        alert.setContentText(table.getSelectionModel().getSelectedItem().idProperty().toString()
+                +" "+table.getSelectionModel().getSelectedItem().textProperty().toString()
+                +" czas "+table.getSelectionModel().getSelectedItem().timeProperty().toString());
 
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            taskObservableList.remove(table.getSelectionModel().getSelectedItem());
+            Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+            alert1.setTitle("Usunięto zlecenie");
+            alert1.setHeaderText(null);
+            alert1.setContentText("Staraj się wpisywać poprawnie zlecenia");
+            alert1.showAndWait();
+        }
+        else{
+            Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+            alert2.setTitle("Nie usunięto zlecenia");
+            alert2.setHeaderText(null);
+            alert2.setContentText("Zdecydowania trochę!");
+            alert2.showAndWait();
+        }
+
+
+    }
+
+    public void shomExeptionWindow(Exception e, String title){
+
+    }
 
 
 }
