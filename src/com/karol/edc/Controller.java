@@ -207,7 +207,7 @@ public class Controller implements Initializable {
                     }
         catch (IOException e){
             e.printStackTrace();
-            shomExeptionWindow(e);
+            //shomExeptionWindow(e.toString(),"Błąd przy zapisie danych");
         }
 
     }
@@ -237,38 +237,55 @@ public class Controller implements Initializable {
 
     @FXML
     public void deleteTask(){
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Usunięcie zlecenia");
-        alert.setHeaderText("Czy na pewno chcesz usunąć zlecenie");
-        alert.setContentText(table.getSelectionModel().getSelectedItem().idProperty().toString()
-                +" "+table.getSelectionModel().getSelectedItem().textProperty().toString()
-                +" czas "+table.getSelectionModel().getSelectedItem().timeProperty().toString());
+
+        if(table.getSelectionModel().getSelectedItem()!=null) {
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Usunięcie zlecenia");
+            alert.setHeaderText("Czy na pewno chcesz usunąć zlecenie");
+            alert.setContentText(table.getSelectionModel().getSelectedItem().idProperty().toString()
+                    + " " + table.getSelectionModel().getSelectedItem().textProperty().toString()
+                    + " czas " + table.getSelectionModel().getSelectedItem().timeProperty().toString());
 
 
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK) {
-            taskObservableList.remove(table.getSelectionModel().getSelectedItem());
-            Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
-            alert1.setTitle("Usunięto zlecenie");
-            alert1.setHeaderText(null);
-            alert1.setContentText("Staraj się wpisywać poprawnie zlecenia");
-            alert1.showAndWait();
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                taskObservableList.remove(table.getSelectionModel().getSelectedItem());
+                showInformationWindow("Zlecenia automatyczne", "Usunięto zlecenie", "Postaraj się wpisywać dobrze");
+            } else {
+                showInformationWindow("Zlecenia automatyczne", "Nie usunięto zlecenie", "Pomyśl dwa razy");
+            }
+
         }
         else{
-            Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
-            alert2.setTitle("Nie usunięto zlecenia");
-            alert2.setHeaderText(null);
-            alert2.setContentText("Zdecydowania trochę!");
-            alert2.showAndWait();
+            showWarningWindow("Zlecenia automatyczne", "Nie wybrano zlecenia", "Wybierz zlecenie");
         }
 
 
     }
 
-    public void shomExeptionWindow(Exception e, String title){
+    public void shomExeptionWindow(String exeption, String title){
 
     }
 
+    public void showInformationWindow(String title,String header,String context){
+        Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+        alert1.setTitle(title);
+        alert1.setHeaderText(header);
+        alert1.setContentText(context);
+        alert1.showAndWait();
+
+    }
+
+
+    public void showWarningWindow(String title,String header,String context){
+        Alert alert1 = new Alert(Alert.AlertType.WARNING);
+        alert1.setTitle(title);
+        alert1.setHeaderText(header);
+        alert1.setContentText(context);
+        alert1.showAndWait();
+
+    }
 
 }
 
