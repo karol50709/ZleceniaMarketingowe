@@ -32,7 +32,7 @@ public class Controller implements Initializable {
     public Slider sliderHours,sliderMinutes;
 
     @FXML
-    public TextField textHour,textMinute,id;
+    public TextField textHour,textMinute,id, count, timetext;
 
     @FXML
     public ComboBox<String> descriptions;
@@ -101,6 +101,7 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
         table.sort();
+        setStats();
 
         sliderHours.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -168,6 +169,7 @@ public class Controller implements Initializable {
             clearTextAreas();
             resetSliders();
             table.sort();
+            setStats();
         }
         else {
             System.out.println("not ok");
@@ -175,12 +177,32 @@ public class Controller implements Initializable {
     }
 
     private boolean validData(){
-        if(!id.getText().isEmpty() && !description.getText().isEmpty()){
-            return true;
-        }
-        else{
-            return false;
-        }
+
+       boolean output = true;
+
+       if(id.getText().isEmpty()){
+           output=false;
+           showWarningWindow("Zlecenia Marketingowe","Puste id","Zlecenie nie zostanie dodane");
+       }
+
+       if(description.getText().isEmpty()){
+           output=false;
+           showWarningWindow("Zlecenia Marketingowe","Pusty opis zlecenia","Zlecenie nie zostanie dodane");
+       }
+
+       if(Utils.String2Int(textHour.getText())*60+Utils.String2Int(textMinute.getText())<0){
+           output=false;
+           showWarningWindow("Zlecenia Marketingowe","Ujemny czas zlecenia","Zlecenie nie zostanie dodane");
+       }
+
+       if(description.getText().trim().isEmpty()){
+           output=false;
+           showWarningWindow("Zlecenia Marketingowe","Opis zlecenia jest pusty","Zlecenie nie zostanie dodane");
+       }
+
+
+
+       return output;
     }
 
     @FXML
@@ -204,10 +226,11 @@ public class Controller implements Initializable {
         try {
             Utils.createCopyofCSV();
             Utils.safe2csv(arrayListFromObserveArrayList(taskObservableList));
+            showInformationWindow("Zlecenia marketingowe","Zapisano dane do pliku zlecenia.csv","OK!");
                     }
         catch (IOException e){
             e.printStackTrace();
-            //shomExeptionWindow(e.toString(),"Błąd przy zapisie danych");
+            showWarningWindow("Zlecenia marketingowe","Wystąpił problem przy zapisie do pliku",e.getMessage());
         }
 
     }
@@ -243,28 +266,41 @@ public class Controller implements Initializable {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Usunięcie zlecenia");
             alert.setHeaderText("Czy na pewno chcesz usunąć zlecenie");
-            alert.setContentText(table.getSelectionModel().getSelectedItem().idProperty().toString()
-                    + " " + table.getSelectionModel().getSelectedItem().textProperty().toString()
-                    + " czas " + table.getSelectionModel().getSelectedItem().timeProperty().toString());
+            alert.setContentText(table.getSelectionModel().getSelectedItem().idProperty().get()
+                    + " " + table.getSelectionModel().getSelectedItem().textProperty().get()
+                    + " czas " + table.getSelectionModel().getSelectedItem().timeProperty().get());
 
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
                 taskObservableList.remove(table.getSelectionModel().getSelectedItem());
-                showInformationWindow("Zlecenia automatyczne", "Usunięto zlecenie", "Postaraj się wpisywać dobrze");
+                showInformationWindow("Zlecenia marketingowe", "Usunięto zlecenie", "Postaraj się wpisywać dobrze");
+                setStats();
+
             } else {
-                showInformationWindow("Zlecenia automatyczne", "Nie usunięto zlecenie", "Pomyśl dwa razy");
+                showInformationWindow("Zlecenia marketingowe", "Nie usunięto zlecenie", "Pomyśl dwa razy");
             }
 
         }
         else{
-            showWarningWindow("Zlecenia automatyczne", "Nie wybrano zlecenia", "Wybierz zlecenie");
+            showWarningWindow("Zlecenia marketingowe", "Nie wybrano zlecenia", "Wybierz zlecenie");
         }
 
 
     }
 
-    public void shomExeptionWindow(String exeption, String title){
+    @FXML
+    public void setStats(){
+        count.setText(String.valueOf(taskObservableList.size()));
+        int time=0;
+        for (int i=0;i<taskObservableList.size();i++){
+            time+=taskObservableList.get(i).timeProperty().get();
+        }
+        timetext.setText(time(time));
+
+    }
+
+    public void showExeptionWindow(String exeption, String title){
 
     }
 
@@ -285,6 +321,12 @@ public class Controller implements Initializable {
         alert1.setContentText(context);
         alert1.showAndWait();
 
+    }
+
+    private String time(int time){
+        int x = time/60;
+        int y =time%60;
+        return x + " h " + y + " m";
     }
 
 }
