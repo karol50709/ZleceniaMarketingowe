@@ -1,6 +1,8 @@
 package com.karol.edc;
 
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -32,7 +34,7 @@ public class Controller implements Initializable {
     public Slider sliderHours,sliderMinutes;
 
     @FXML
-    public TextField textHour,textMinute,id, count, timetext;
+    public TextField textHour,textMinute,id, count, timetext, search;
 
     @FXML
     public ComboBox<String> descriptions;
@@ -46,6 +48,36 @@ public class Controller implements Initializable {
     @FXML
     TableView<Task> table = new TableView<Task>();
 
+    private void initFilter(){
+        search.textProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                if (search.textProperty().get().isEmpty()){
+                    table.setItems(taskObservableList);
+                    return;
+                }
+                ObservableList<Task> tableItems = FXCollections.observableArrayList();
+                ObservableList<TableColumn<Task,?>> cols = table.getColumns();
+                for(int i=0;i<taskObservableList.size();i++){
+                    for(int j=0;j<cols.size();j++){
+                        TableColumn col= cols.get(j);
+                        String cellValue=col.getCellData(taskObservableList.get(i)).toString().toLowerCase();
+                        if(cellValue.contains(search.getText().toLowerCase())){
+                            tableItems.add(taskObservableList.get(i));
+                        }
+
+                    }
+                }
+                table.setItems(tableItems);
+                if(tableItems.size()<1){
+                    search.setStyle("-fx-text-fill: red;");
+                }
+                else {
+                    search.setStyle("-fx-text-fill: black;");
+                }
+            }
+        });
+    }
 
 
     ObservableList<String> observableList = FXCollections.observableArrayList(
@@ -102,6 +134,7 @@ public class Controller implements Initializable {
         }
         table.sort();
         setStats();
+        initFilter();
 
         sliderHours.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -121,48 +154,48 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    public void plusHour(){
+    private void plusHour(){
         sliderHours.setValue(sliderHours.getValue()+1);
         textHour.setText(Utils.Double2String(sliderHours.getValue())+" h");
     }
 
     @FXML
-    public void minusHour(){
+    private void minusHour(){
         sliderHours.setValue(sliderHours.getValue()-1);
         textHour.setText(Utils.Double2String(sliderHours.getValue())+" h");
     }
 
     @FXML
-    public void plusMinute(){
+    private void plusMinute(){
         sliderMinutes.setValue(sliderMinutes.getValue()+1);
         textMinute.setText(Utils.Double2String(sliderMinutes.getValue())+" m");
     }
 
     @FXML
-    public void minusMinute(){
+    private void minusMinute(){
         sliderMinutes.setValue(sliderMinutes.getValue()-1);
         textMinute.setText(Utils.Double2String(sliderMinutes.getValue())+" m");
     }
 
     @FXML
-    public void plusFiveMinutes(){
+    private void plusFiveMinutes(){
         sliderMinutes.setValue(sliderMinutes.getValue()+5);
         textMinute.setText(Utils.Double2String(sliderMinutes.getValue())+" m");
     }
 
     @FXML
-    public void minusFiveMinutes(){
+    private void minusFiveMinutes(){
         sliderMinutes.setValue(sliderMinutes.getValue()-5);
         textMinute.setText(Utils.Double2String(sliderMinutes.getValue())+" m");
     }
 
     @FXML
-    public void setDescription(){
+    private void setDescription(){
         description.setText(descriptions.getValue());
     }
 
     @FXML
-    public void addTask(){
+    private void addTask(){
         if(validData()){
             int time = Utils.String2Int(textHour.getText())*60+Utils.String2Int(textMinute.getText());
             taskObservableList.add(new Task(Integer.parseInt(id.getText()),description.getText(),time));
@@ -206,7 +239,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    public void clearTextAreas(){
+    private void clearTextAreas(){
         id.setText("");
         textHour.setText("0 h");
         textMinute.setText("0 m");
@@ -214,14 +247,14 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    public void resetSliders(){
+    private void resetSliders(){
         sliderHours.setValue(0);
         sliderMinutes.setValue(0);
     }
 
 
     @FXML
-    public void save2file(){
+    private void save2file(){
         ArrayList<Task> tmp = new ArrayList<>();
         try {
             Utils.createCopyofCSV();
@@ -244,7 +277,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    public void openAbout(){
+    private void openAbout(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("about.fxml"));
             Parent parent = fxmlLoader.load();
@@ -259,7 +292,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    public void deleteTask(){
+    private void deleteTask(){
 
         if(table.getSelectionModel().getSelectedItem()!=null) {
 
@@ -290,7 +323,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    public void setStats(){
+    private void setStats(){
         count.setText(String.valueOf(taskObservableList.size()));
         int time=0;
         for (int i=0;i<taskObservableList.size();i++){
@@ -300,11 +333,16 @@ public class Controller implements Initializable {
 
     }
 
-    public void showExeptionWindow(String exeption, String title){
+    public void showExeptionWindow(Exception exeption, String title, Alert.AlertType type){
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setContentText(exeption.getMessage());
+        alert.showAndWait();
+
 
     }
 
-    public void showInformationWindow(String title,String header,String context){
+    private void showInformationWindow(String title, String header, String context){
         Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
         alert1.setTitle(title);
         alert1.setHeaderText(header);
@@ -314,7 +352,7 @@ public class Controller implements Initializable {
     }
 
 
-    public void showWarningWindow(String title,String header,String context){
+    private void showWarningWindow(String title, String header, String context){
         Alert alert1 = new Alert(Alert.AlertType.WARNING);
         alert1.setTitle(title);
         alert1.setHeaderText(header);
@@ -328,6 +366,8 @@ public class Controller implements Initializable {
         int y =time%60;
         return x + " h " + y + " m";
     }
+
+
 
 }
 

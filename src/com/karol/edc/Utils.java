@@ -66,8 +66,8 @@ public class Utils {
         File newFile = new File("zlecenia.csv");
         newFile.createNewFile();
         PrintWriter printWriter = new PrintWriter(newFile);
-        for (int x=0;x<tasks.size();x++){
-            printWriter.write(tasks.get(x).toString());
+        for (Task task : tasks) {
+            printWriter.write(task.toString());
             printWriter.write("\r\n");
         }
         printWriter.close();

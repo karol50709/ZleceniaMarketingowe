@@ -11,7 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.karol.edc.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="1100.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.karol.edc.Controller">
    <children>
       <Slider fx:id="sliderHours" layoutX="50.0" layoutY="128.0" majorTickUnit="5.0" max="23.0" prefHeight="15.0" prefWidth="304.0" showTickLabels="true" showTickMarks="true" />
       <ImageView fx:id="logo" fitHeight="80.0" fitWidth="158.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" />
@@ -22,24 +22,25 @@
       <Button fx:id="minusMinute" layoutX="420.0" layoutY="181.0" mnemonicParsing="false" onAction="#minusMinute" prefHeight="26.0" prefWidth="29.0" text="-" />
       <TextField fx:id="textHour" layoutX="160.0" layoutY="84.0" prefHeight="26.0" prefWidth="42.0" promptText="HH" />
       <TextField fx:id="textMinute" layoutX="217.0" layoutY="84.0" prefHeight="26.0" prefWidth="63.0" promptText="MM" />
-      <ComboBox fx:id="descriptions" layoutX="50.0" layoutY="344.0" onAction="#setDescription" prefHeight="26.0" prefWidth="304.0" promptText="Opisy zleceń" />
-      <TextArea fx:id="description" layoutX="50.0" layoutY="250.0" prefHeight="80.0" prefWidth="304.0" promptText="Opis zlecenia" />
-      <Button fx:id="addTask" layoutX="50.0" layoutY="405.0" mnemonicParsing="false" onAction="#addTask" prefHeight="26.0" prefWidth="304.0" text="Dodaj Zlecenie" />
-      <TableView fx:id="table" layoutX="520.0" layoutY="49.0" prefHeight="432.0" prefWidth="536.0" />
+      <ComboBox fx:id="descriptions" layoutX="50.0" layoutY="367.0" onAction="#setDescription" prefHeight="26.0" prefWidth="304.0" promptText="Opisy zleceń" />
+      <TextArea fx:id="description" layoutX="50.0" layoutY="250.0" prefHeight="110.0" prefWidth="304.0" promptText="Opis zlecenia" />
+      <Button fx:id="addTask" layoutX="50.0" layoutY="404.0" mnemonicParsing="false" onAction="#addTask" prefHeight="26.0" prefWidth="304.0" text="Dodaj Zlecenie" />
+      <TableView fx:id="table" layoutX="520.0" layoutY="90.0" prefHeight="478.0" prefWidth="536.0" />
       <TextField fx:id="id" layoutX="19.0" layoutY="84.0" prefHeight="26.0" prefWidth="130.0" promptText="Numer zlecenia" />
       <Button fx:id="plusFiveMinutes" layoutX="358.0" layoutY="224.0" mnemonicParsing="false" onAction="#plusFiveMinutes" text="+5" />
       <Button fx:id="minusFiveMinutes" layoutX="419.0" layoutY="224.0" mnemonicParsing="false" onAction="#minusFiveMinutes" text="-5" />
       <Button fx:id="save" layoutX="519.0" layoutY="14.0" mnemonicParsing="false" onAction="#save2file" prefHeight="26.0" prefWidth="158.0" text="Zapisz do csv" />
       <Button fx:id="About" layoutX="1040.0" layoutY="14.0" mnemonicParsing="false" onAction="#openAbout" text="?" />
       <Button layoutX="691.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteTask" prefHeight="26.0" prefWidth="113.0" text="Usuń zlecenie" />
-      <ImageView fitHeight="66.0" fitWidth="137.0" layoutX="2.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="66.0" fitWidth="198.0" layoutX="2.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../edc-logo-1.jpg" />
+            <Image url="@../../../resources/edc-logo-1.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="519.0" layoutY="498.0" prefHeight="16.0" prefWidth="198.0" text="Ilość zleceń marketingowych: " />
-      <Label layoutX="829.0" layoutY="498.0" prefHeight="16.0" prefWidth="51.0" text="Czas:" />
-      <TextField fx:id="count" layoutX="719.0" layoutY="493.0" prefHeight="26.0" prefWidth="99.0" />
-      <TextField fx:id="timetext" layoutX="880.0" layoutY="493.0" />
+      <Label layoutX="522.0" layoutY="583.0" prefHeight="16.0" prefWidth="198.0" text="Ilość zleceń marketingowych: " />
+      <Label layoutX="832.0" layoutY="583.0" prefHeight="16.0" prefWidth="51.0" text="Czas:" />
+      <TextField fx:id="count" layoutX="722.0" layoutY="578.0" prefHeight="26.0" prefWidth="99.0" />
+      <TextField fx:id="timetext" layoutX="883.0" layoutY="578.0" />
+      <TextField fx:id="search" layoutX="520.0" layoutY="54.0" prefHeight="26.0" prefWidth="536.0" promptText="Wyszukaj" />
    </children>
 </Pane>

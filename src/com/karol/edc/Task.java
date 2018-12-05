@@ -46,9 +46,6 @@ public class Task {
 
     @Override
     public String toString() {
-        String tmp1=id.get()+"";
-        String tmp2=text.getValue();
-        String tmp3=time.get()+"";
-        return tmp1+";"+tmp2+";"+tmp3;
+        return id.get()+""+";"+text.getValue()+";"+time.get()+"";
     }
 }
