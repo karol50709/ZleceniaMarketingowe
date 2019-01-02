@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="editButton" layoutX="24.0" layoutY="269.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Edytuj" />
+      <Button fx:id="closeButton" layoutX="293.0" layoutY="269.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="26.0" prefWidth="167.0" text="Anuluj" />
+      <TextField fx:id="editID" layoutX="24.0" layoutY="45.0" promptText="ID" />
+      <TextArea fx:id="editdescription" layoutX="212.0" layoutY="45.0" prefHeight="200.0" prefWidth="299.0" />
+      <Label layoutX="24.0" layoutY="22.0" text="ID" />
+      <Label layoutX="212.0" layoutY="22.0" text="Opis" />
+      <TextField fx:id="editHours" layoutX="24.0" layoutY="106.0" prefHeight="26.0" prefWidth="54.0" />
+      <TextField fx:id="editMinutes" layoutX="87.0" layoutY="106.0" prefHeight="26.0" prefWidth="54.0" />
+      <Label layoutX="20.0" layoutY="80.0" prefHeight="16.0" prefWidth="126.0" text="  HH             MM" />
+   </children>
+</Pane>
